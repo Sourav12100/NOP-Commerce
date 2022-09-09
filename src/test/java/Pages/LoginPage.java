@@ -7,7 +7,7 @@ public class LoginPage {
     WebDriver driver ;
     By Email = By.xpath("(//input[@class='email input-validation-error'])");
     By Password = By.xpath("(//input[@class='password'])");
-    By submit =By.xpath("//button");
+    By Login = By.xpath("//button[@class='button-1 login-button']");
 
     public LoginPage(WebDriver driver) {
         this.driver=driver;
@@ -17,7 +17,7 @@ public class LoginPage {
         Thread.sleep(5000);
         driver.findElement(Email).sendKeys("admin@yourstore.com");
         driver.findElement(Password).sendKeys("admin");
-        driver.findElement(submit).click();
+        driver.findElement(Login).click();
 
     }
 }
